@@ -6,12 +6,12 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { NgChartsModule } from 'ng2-charts';
-import { ChartLineComponent } from './components/chart-line/chart-line.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartLineComponent
+    ChartComponent
   ],
   imports: [
     BrowserModule,
