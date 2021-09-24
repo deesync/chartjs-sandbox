@@ -7,11 +7,13 @@ import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { NgChartsModule } from 'ng2-charts';
 import { ChartComponent } from './components/chart/chart.component';
+import { DatasetComponent } from './components/dataset/dataset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChartComponent
+    ChartComponent,
+    DatasetComponent
   ],
   imports: [
     BrowserModule,

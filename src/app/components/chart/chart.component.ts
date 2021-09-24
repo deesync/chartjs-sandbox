@@ -18,12 +18,13 @@ export class ChartComponent implements OnInit {
   public chartData: ChartConfiguration['data'];
   public chartOptions: ChartConfiguration['options'];
 
-  data = this.firefetchService.data;
-  options = this.firefetchService.options;
-
   ngOnInit(): void {
-    this.data.subscribe(action => this.chartData = action.payload.val());
-    this.options.subscribe(action => this.chartOptions = action.payload.val());
+    this.firefetchService.data.subscribe(
+      action => this.chartData = action.payload.val()
+    );
+    this.firefetchService.options.subscribe(
+      action => this.chartOptions = action.payload.val()
+    );
   }
 
 }

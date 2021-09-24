@@ -42,6 +42,7 @@ testem.log
 database-debug.log
 /typings
 .firebase/
+.notes/
 
 # System Files
 .DS_Store
