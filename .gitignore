@@ -41,10 +41,8 @@ yarn-error.log
 testem.log
 database-debug.log
 /typings
+.firebase/
 
 # System Files
 .DS_Store
 Thumbs.db
-
-# Notes
-__mockup/
