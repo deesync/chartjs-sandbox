@@ -1,1 +1,23 @@
-<p>{{data.datasets[0].data[1]}}</p>
+<select [(ngModel)]="datasetId">
+    <option *ngFor="let set of data.datasets; index as i" 
+        [ngValue]="i">
+        {{set.label}}
+    </option>
+</select>
+
+<div *ngFor="let value of data.datasets[datasetId].data;
+             index as i">
+    {{data.labels[i]}}
+    <input 
+        type="number" size="5"
+        [(ngModel)]="data.datasets[datasetId].data[i]"
+        (input)="updateData()">
+    
+    <button (click)="removeNode(i)">X</button>
+</div>
+
+<div>
+    <input [(ngModel)]="nodeModel.name" placeholder="Month" required>
+    <input [(ngModel)]="nodeModel.value" type="number" size="5">
+    <button (click)="addNode()">+</button>
+</div>
